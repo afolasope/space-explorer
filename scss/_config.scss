@@ -1,0 +1,48 @@
+$black-color: #0b0d17;
+$lilac-color: #d0d6f9;
+$white-color: #ffffff;
+$cream-color: rgb(250, 235, 215);
+
+$tab-hover: 1px solid #979797;
+$tab-active: 2px solid rgba(255, 255, 255, 0.9);
+
+$bellefair-font: "Bellefair", serif;
+$condensed-font: "Barlow Condensed", sans-serif;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin nav-text {
+  font-size: 1rem;
+  letter-spacing: 2.75;
+  font-family: $condensed-font;
+}
+
+@mixin transition-ease {
+  transition: all 0.4s ease-out;
+}
+
+@mixin heading5 {
+  font-size: clamp(1.2rem, 1.8vw, 2rem);
+  color: $white-color;
+  text-transform: uppercase;
+  font-family: $condensed-font;
+}
+
+
+@mixin media-tab {
+  @media screen and (min-width: 601px) {
+    @content;
+  }
+}
+
+@mixin media-pc {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+

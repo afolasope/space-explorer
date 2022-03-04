@@ -1,0 +1,125 @@
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.5rem;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70vw;
+  opacity: 0.98;
+  visibility: hidden;
+  transform: translateX(100%);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+  @include transition-ease;
+
+  &.open {
+    visibility: visible;
+    transform: translateX(0);
+
+    @include transition-ease;
+  }
+
+  &__menu {
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    transform: translateX(100%);
+    @include transition-ease;
+
+    &.open {
+      transform: translateX(0);
+    }
+
+    .btn--close {
+      margin: 2.8rem 0rem 3.5rem 88%;
+    }
+
+    .nav__items {
+      list-style-type: none;
+      margin-left: 2rem;
+      color: $white-color;
+    }
+
+    .nav__item {
+      font-family: $condensed-font;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+
+      &-num {
+        margin-right: 0.6rem;
+      }
+    }
+  }
+}
+
+@include media-tab {
+  .nav__btn {
+    display: none;
+  }
+
+  .nav {
+    visibility: visible;
+    transform: translateX(0);
+    position: relative;
+    width: 60%;
+
+    &__menu {
+      display: block;
+      transform: translateX(0);
+      height: 100%;
+      width: auto;
+
+      .nav__items {
+        display: flex;
+        margin: 0;
+        align-items: center;
+        justify-content: space-around;
+
+        .nav__item {
+          margin-bottom: 0;
+          padding: 2rem 0;
+          text-decoration: none;
+
+          &:hover {
+            border-bottom: $tab-hover;
+          }
+
+          &.active {
+            border-bottom: $tab-active;
+          }
+
+          &-num {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-pc {
+  .header {
+    margin-top: 2.2rem;
+    justify-content: space-between;
+  }
+
+  .nav::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 52%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.28);
+    left: -48%;
+    top: 50%;
+  }
+
+  .nav__menu .nav__items .nav__item-num {
+    display: inline-block;
+    font-weight: 200;
+  }
+}

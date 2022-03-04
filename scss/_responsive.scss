@@ -1,0 +1,274 @@
+@include media-tab {
+  .page1 {
+    background-image: url(../starter-code/assets/home/background-home-tablet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .home {
+    margin-top: 6.6rem;
+    padding: 0 10rem;
+  }
+  //********** destanation page  ************//
+
+  .common .common-title {
+    h5 {
+      text-align: start;
+      font-size: 1.5rem;
+    }
+  }
+  .common .common__img {
+    height: 20rem;
+    width: 20rem;
+    img {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+  }
+  .common .common__text {
+    max-width: 800px;
+  }
+  .common {
+    #{&}__name {
+      font-size: 5rem;
+    }
+
+    .details {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  // ////////////CREW//// CREW ////CREW/////
+  .wrapper.page3 {
+    padding-bottom: 0;
+    .block {
+      display: flex;
+      flex-flow: column-reverse;
+      margin-top: 1.5rem;
+    }
+    .common__wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .common__border {
+      display: none;
+    }
+
+    .dnav {
+      margin-top: 1.5rem;
+      width: 35%;
+    }
+    .common__img {
+      margin-top: 0;
+    }
+    .common__text {
+      width: 60%;
+    }
+  }
+
+  //*********************technology**************
+  .wrapper.page4 {
+    .common__wrapper {
+      padding: 0 5rem;
+      // border: 9px solid goldenrod;
+    }
+    .dnav {
+      width: 35%;
+    }
+  }
+}
+@include media-pc {
+  .page1 {
+    background: url(../starter-code/assets/home/background-home-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .home {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    &__text {
+      margin-bottom: 0;
+      text-align: left;
+      flex-basis: 40%;
+      h4 {
+        font-size: 1.75rem;
+      }
+      h1 {
+        font-size: 9rem;
+        margin-left: 0;
+      }
+      p {
+        line-height: 32px;
+        font-size: 1.5;
+        margin: 0;
+        min-width: 100%;
+      }
+    }
+    &__btn {
+      align-self: flex-end;
+    }
+  }
+  .home .home__btn .btn {
+    height: 17rem;
+    width: 17rem;
+    margin-left: 60%;
+    margin-top: 33%;
+    &:hover {
+      outline: 50px solid rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  //********** destanation page  ************//
+
+  .common {
+    margin-top: 2rem;
+  }
+  .common .common__title {
+    margin-left: 9%;
+    margin-top: 2.5rem;
+    h5 {
+      text-align: start;
+      font-size: 2rem;
+    }
+  }
+  .common .common__img {
+    height: 25rem;
+    width: 25rem;
+    img {
+      height: 100%;
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .common {
+    margin-top: 2rem;
+    .block {
+      display: flex;
+      margin-top: 5rem;
+    }
+
+    &__wrapper {
+      flex-basis: 35%;
+      margin-right: 12%;
+    }
+    #{&}__name {
+      margin-top: 4rem;
+      text-align: start;
+    }
+
+    &__text {
+      p {
+        text-align: start;
+        max-width: 400px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .common .common__wrapper .dnav {
+    margin: 0;
+    width: 60%;
+    &-list-items {
+      justify-content: space-between;
+    }
+  }
+  .common .common__border {
+    width: 400px;
+    margin: 2rem 0;
+  }
+  .common .details {
+    margin: 0;
+    width: 400px;
+    justify-content: space-between;
+  }
+
+  //************ crew ****************//
+
+  .wrapper.page3 {
+    .block {
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+    .common__img {
+      flex-basis: 30%;
+      height: 30rem;
+      margin-right: 9%;
+      img {
+        width: 100%;
+      }
+    }
+    .common__wrapper {
+      flex-basis: 40%;
+      margin-left: 9%;
+      height: fit-content;
+    }
+    .common__text {
+      width: 100%;
+    }
+    .dnav {
+      width: 100%;
+      margin-top: 2rem;
+      .dnav-list-items {
+        justify-content: flex-start;
+        gap: 2rem;
+        width: 100%;
+      }
+    }
+  }
+  //********** technology page  ************//
+  .page4 {
+    .block {
+      display: flex;
+      flex-flow: row-reverse;
+    }
+    .common__img {
+      margin: 0;
+      height: 30rem;
+      flex-basis: 40%;
+    }
+
+    .common__wrapper {
+      display: flex;
+      gap: 3.5rem;
+      align-items: center;
+      justify-content: center;
+      flex-basis: 60%;
+      margin-left: 2rem;
+      .tech-nav-circle {
+        height: 5rem;
+        width: 5rem;
+      }
+    }
+    .dnav {
+      height: 55%;
+      flex-basis: 10%;
+    }
+    .dnav-list-items {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .text-nav-wrapper {
+      flex-basis: 90%;
+      text-align: center;
+
+      // height: 100%;
+      .common__name {
+        margin-top: 0;
+      }
+    }
+  }
+}

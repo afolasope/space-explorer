@@ -1,0 +1,56 @@
+@import 'config';
+@import 'nav';
+@import 'home';
+@import 'responsive';
+@import 'destination';
+@import 'crew'; 
+@import 'technology';
+
+h1 {
+  color: $white-color;
+  font-family: $bellefair-font;
+}
+h2 {
+  font-size: 6vw;
+  color: $white-color;
+}
+h3 {
+  font-size: clamp(1rem, 10vw, 2rem);
+  font-family: $bellefair-font;
+  color: $white-color;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 5vw;
+  text-transform: uppercase;
+}
+h5 {
+  font-size:  clamp(1.3rem, 1.1vw, 3rem);
+  color: $white-color;
+  text-transform: uppercase;
+  font-family: $condensed-font;
+}
+p {
+  font-size: clamp(1.1rem, 1.1vw, 1.6rem);
+  line-height: 35px;
+  color: $lilac-color;
+  font-family: $condensed-font;
+}
+
+a {
+  text-decoration: none;
+  color: $white-color;
+}
+ul {
+  list-style: none;
+}
+
+.content {
+  margin: 1rem;
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding-bottom: 3rem;
+  overflow: hidden;
+}

@@ -1,0 +1,53 @@
+.page3 {
+  background: url(../starter-code/assets/destination/background-destination-desktop.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include media-tab {
+    background-image: url(../starter-code/assets/crew/background-crew-tablet.jpg);
+  }
+
+  @include media-pc {
+    background-image: url(../starter-code/assets//crew/background-crew-desktop.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .common__img.crew {
+    margin-bottom: 0;
+  }
+  .common__border.crew {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .crew-list-item {
+    height: 10px;
+    width: 10px;
+    background-color: $tab-active;
+    background-color: grey; // chane to root
+    border-radius: 50%;
+
+    &.active {
+      background-color: white;
+    }
+  }
+  .dnav-list-items.crew {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .common__name {
+    letter-spacing: 2px;
+
+    h4 {
+      color: #979797;
+      font-size: 1.1rem;
+      font-family: $bellefair-font;
+      margin-bottom: 1rem;
+    }
+    h5 {
+      font-size: 1.8rem;
+    }
+  }
+}
